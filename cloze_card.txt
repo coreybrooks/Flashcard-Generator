@@ -40,6 +40,6 @@ fullText: 'The sailfish is the fastest fish in the ocean',
 cloze: 'sailfish',
 partialText: 'The ... is the fastest fish in the ocean'};
 {title: 'legsQuestion',
-fullText: 'The millipede has the most legs out any animal',
+fullText: 'The millipede has the most legs out of any animal',
 cloze: 'millipede',
-partialText: 'The ... has the most legs out any animal'};
+partialText: 'The ... has the most legs out of any animal'};

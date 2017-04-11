@@ -6,6 +6,20 @@
 var inquirer = require('inquirer');
 var fs = require('fs');
 
+//function to read the data of the different files after new data has been added
+function readFiles(type) {
+        fs.readFile(type, 'utf8', function(err, data) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+          var flashCards = data.split(";");
+          flashCards.length = flashCards.length - 1;
+          console.log(type + "\n" + flashCards + "\n---------------\n");
+        }
+    });
+}
+
 //Constructor for creating and storing new basic cards
 function BasicCard(title, front, back) {
     this.title = title;
@@ -19,21 +33,12 @@ function BasicCard(title, front, back) {
           console.log(err);
         }
         else {
-          console.log("Content added to basic_card.txt!");
+          console.log("\nContent added to basic_card.txt!");
           console.log("\n----------------\n");
         }
     });
-
-    fs.readFile('basic_card.txt', 'utf8', function(err, data) {
-        if (err) {
-            console.log(err);
-        }
-        else {
-          var basicCards = data.split(";");
-          basicCards.length = basicCards.length - 1;
-          console.log("basicCards: " + "\n" + basicCards + "\n---------------\n");
-        }
-    });
+      
+      readFiles("basic_card.txt");
 }
 
 //Constructor for creating and storing cloze cards
@@ -52,28 +57,19 @@ function ClozeCard(title, fullText, cloze) {
     this.partialText = partialText;
     this.entry = "\n{title: '" + this.title + "'," + "\nfullText: '" + this.fullText + "',"
           + "\ncloze: '" + this.cloze + "'," + "\npartialText: '" + this.partialText + "'};";
-    console.log(this.entry + "\n-------------\n");
 
         fs.appendFile('cloze_card.txt', this.entry, function(err) {
            if (err) {
              console.log(err);
            }
            else {
-             console.log("Content added to cloze_card.txt!");
+             console.log("\nContent added to cloze_card.txt!");
              console.log("\n----------------\n");
            }
         });
-        
-        fs.readFile('cloze_card.txt', 'utf8', function(err, data) {
-           if (err) {
-               console.log(err);
-           }
-           else {
-             var clozeCards = data.split(";");
-             clozeCards.length = clozeCards.length - 1;
-             console.log("clozeCards: " + "\n" + clozeCards + "\n---------\n");
-           }
-        });
+
+        readFiles("cloze_card.txt");
+
      }
     else {
         console.log("Oops, this doesn't work. Recheck the spelling and make sure the cloze is part of the full text");
@@ -94,7 +90,7 @@ inquirer.prompt([
       }
       else {
          cloze();
-     }
+      }
    });
 
 //section for promting the user for the basic card information
@@ -114,7 +110,7 @@ function basic() {
         name: 'back'
         }
     ]).then( function(answer) {
-        answer.title = new BasicCard(answer.title, answer.front, answer.back);       
+        var newBasicCard = new BasicCard(answer.title, answer.front, answer.back);       
     })
 }
 
@@ -136,5 +132,5 @@ function cloze() {
         }
     ]).then( function(answer) {
         var newClozeCard = new ClozeCard(answer.title, answer.fullText, answer.cloze);
-    })
+    });
 }

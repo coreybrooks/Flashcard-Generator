@@ -28,4 +28,7 @@ front: 'Natural pearls are found in what sea creature?',
 back: 'Oyster'};
 {title: 'fastestQuestion',
 front: 'What is the fastest fish in the ocean?',
-back: 'sailfish'};
+back: 'Sailfish'};
+{title: 'legsQuestion',
+front: 'Which animal has the most legs?',
+back: 'Millipede'};
