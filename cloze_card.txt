@@ -1,0 +1,21 @@
+
+{title: 'parrotsQuestion',
+fullText: 'The proper name for a group of parrots is pandemonium',
+cloze: 'pandemonium',
+partialText: 'The proper name for a group of parrots is ...'}
+{title: 'earsQuestion',
+fullText: 'An African elephant has the largest ears of all animals',
+cloze: 'African elephant',
+partialText: 'An ... has the largest ears of all animals'}
+{title: 'alligatorQuestion',
+fullText: 'In the US, South Florida is where alligators and crocodiles can be found together in the wild',
+cloze: 'South Florida',
+partialText: 'In the US, ... is where alligators and crocodiles can be found together in the wild'}
+{title: 'lionQuestion',
+fullText: 'A group of lions is called a pride',
+cloze: 'pride',
+partialText: 'A group of lions is called a ...'}
+{title: 'snakeQuestion',
+fullText: 'A python is the largest snake ever held in captivity',
+cloze: 'python',
+partialText: 'A ... is the largest snake ever held in captivity'}

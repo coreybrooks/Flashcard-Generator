@@ -1,0 +1,16 @@
+
+{title: 'parrotsQuestion',
+front: 'what is the proper name for a group of parrots',
+back: 'pandemonium}
+{title: 'earsQuestion',
+front: 'what animal has the largest ears?',
+back: 'African elephant}
+{title: 'alligatorQuestion',
+front: 'In the US, where can alligators and crocodiles be found together in the wild?',
+back: 'South Florida}
+{title: 'lionQuestion',
+front: 'What is a group of lions called?',
+back: 'A pride}
+{title: 'snakeQuestion',
+front: 'The longest snake ever held in captivity belongs to what species?',
+back: 'Python}
