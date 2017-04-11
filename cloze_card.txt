@@ -1,21 +1,45 @@
 
 {title: 'parrotsQuestion',
-fullText: 'The proper name for a group of parrots is pandemonium',
-cloze: 'pandemonium',
-partialText: 'The proper name for a group of parrots is ...'}
+fullText: 'Pandemonium is the proper name for a group of parrots',
+cloze: 'Pandemonium',
+partialText: '... is the proper name for a group of parrots'};
 {title: 'earsQuestion',
-fullText: 'An African elephant has the largest ears of all animals',
-cloze: 'African elephant',
-partialText: 'An ... has the largest ears of all animals'}
+fullText: 'African elephants have the largest ears of all animals',
+cloze: 'African elephants',
+partialText: '... have the largest ears of all animals'};
 {title: 'alligatorQuestion',
-fullText: 'In the US, South Florida is where alligators and crocodiles can be found together in the wild',
+fullText: 'In the US, South Florida is where alligators and crocodiles can found together in the wild',
 cloze: 'South Florida',
-partialText: 'In the US, ... is where alligators and crocodiles can be found together in the wild'}
+partialText: 'In the US, ... is where alligators and crocodiles can found together in the wild'};
 {title: 'lionQuestion',
 fullText: 'A group of lions is called a pride',
 cloze: 'pride',
-partialText: 'A group of lions is called a ...'}
+partialText: 'A group of lions is called a ...'};
 {title: 'snakeQuestion',
-fullText: 'A python is the largest snake ever held in captivity',
+fullText: 'A python is the largest species of snake to ever be held in captivity',
 cloze: 'python',
-partialText: 'A ... is the largest snake ever held in captivity'}
+partialText: 'A ... is the largest species of snake to ever be held in captivity'};
+{title: 'octopusQuestion',
+fullText: 'An octopus has eight hearts',
+cloze: 'eight',
+partialText: 'An octopus has ... hearts'};
+{title: 'sleepyQuestion',
+fullText: 'The koala is the sleepiest animal in the world, sleeping around 22 hours each day',
+cloze: 'koala',
+partialText: 'The ... is the sleepiest animal in the world, sleeping around 22 hours each day'};
+{title: 'polarQuestion',
+fullText: 'Polar bears feed mainly on seals',
+cloze: 'seals',
+partialText: 'Polar bears feed mainly on ...'};
+{title: 'pearlQuestion',
+fullText: 'Oysters are the sea creature in which natural pearls are found',
+cloze: 'Oysters',
+partialText: '... are the sea creature in which natural pearls are found'};
+{title: 'fastestQuestion',
+fullText: 'The sailfish is the fastest fish in the ocean',
+cloze: 'sailfish',
+partialText: 'The ... is the fastest fish in the ocean'};
+{title: 'legsQuestion',
+fullText: 'The millipede has the most legs out any animal',
+cloze: 'millipede',
+partialText: 'The ... has the most legs out any animal'};

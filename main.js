@@ -1,33 +1,42 @@
-//The instruction were unclear as to wether we are creating an API that allows users to create flashcards,
-//or if we are creating an API that allows users to display flashcards to the console that we have created,
-//this program allows users to create flashcards of their choosing and stores them for later use which is
-//slightly more complicated
+//The instruction were unclear as to whether we are creating an API that allows users to create flashcards,
+//or if we are creating an API that allows users to display flashcards to the console that have already been
+//created.  This program allows users to create flashcards of their choosing and stores them for later use which
+//is slightly more complicated
 
 var inquirer = require('inquirer');
 var fs = require('fs');
 
-var basicCards = [];
-var clozeCards = [];
-
+//Constructor for creating and storing new basic cards
 function BasicCard(title, front, back) {
     this.title = title;
     this.front = front;
     this.back = back;
     this.entry = "\n{title: '" + this.title + "'," + "\nfront: '" + this.front + "',"
-                  + "\nback: '" + this.back + "}";
-    console.log(this.entry + "\n--------------\n"); 
+                  + "\nback: '" + this.back + "'};";
 
     fs.appendFile('basic_card.txt', this.entry, function(err) {
-
         if (err) {
           console.log(err);
         }
         else {
           console.log("Content added to basic_card.txt!");
+          console.log("\n----------------\n");
+        }
+    });
+
+    fs.readFile('basic_card.txt', 'utf8', function(err, data) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+          var basicCards = data.split(";");
+          basicCards.length = basicCards.length - 1;
+          console.log("basicCards: " + "\n" + basicCards + "\n---------------\n");
         }
     });
 }
 
+//Constructor for creating and storing cloze cards
 function ClozeCard(title, fullText, cloze) {
  
     this.title = title;
@@ -42,7 +51,7 @@ function ClozeCard(title, fullText, cloze) {
     var partialText = fullText.replace(cloze, '...');
     this.partialText = partialText;
     this.entry = "\n{title: '" + this.title + "'," + "\nfullText: '" + this.fullText + "',"
-          + "\ncloze: '" + this.cloze + "'," + "\npartialText: '" + this.partialText + "'}";
+          + "\ncloze: '" + this.cloze + "'," + "\npartialText: '" + this.partialText + "'};";
     console.log(this.entry + "\n-------------\n");
 
         fs.appendFile('cloze_card.txt', this.entry, function(err) {
@@ -51,6 +60,18 @@ function ClozeCard(title, fullText, cloze) {
            }
            else {
              console.log("Content added to cloze_card.txt!");
+             console.log("\n----------------\n");
+           }
+        });
+        
+        fs.readFile('cloze_card.txt', 'utf8', function(err, data) {
+           if (err) {
+               console.log(err);
+           }
+           else {
+             var clozeCards = data.split(";");
+             clozeCards.length = clozeCards.length - 1;
+             console.log("clozeCards: " + "\n" + clozeCards + "\n---------\n");
            }
         });
      }
@@ -76,6 +97,7 @@ inquirer.prompt([
      }
    });
 
+//section for promting the user for the basic card information
 function basic() {
     console.log('basic');
     inquirer.prompt([{
@@ -96,6 +118,7 @@ function basic() {
     })
 }
 
+//section for prompting the user for cloze card information
 function cloze() {
     console.log('cloze');
     inquirer.prompt([{
@@ -112,6 +135,6 @@ function cloze() {
         name: 'cloze'
         }
     ]).then( function(answer) {
-        answer.title = new ClozeCard(answer.title, answer.fullText, answer.cloze);
+        var newClozeCard = new ClozeCard(answer.title, answer.fullText, answer.cloze);
     })
 }

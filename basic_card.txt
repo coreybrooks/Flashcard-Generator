@@ -1,16 +1,31 @@
 
 {title: 'parrotsQuestion',
-front: 'what is the proper name for a group of parrots',
-back: 'pandemonium}
+front: 'What is the proper name for a group of parrots?',
+back: 'pandemonium'};
 {title: 'earsQuestion',
-front: 'what animal has the largest ears?',
-back: 'African elephant}
+front: 'What animal has the largest ears?',
+back: 'African elephant'};
 {title: 'alligatorQuestion',
-front: 'In the US, where can alligators and crocodiles be found together in the wild?',
-back: 'South Florida}
+front: 'In the US, where can alligators and crocodiles be found living together in the wild?',
+back: 'South Florida'};
 {title: 'lionQuestion',
-front: 'What is a group of lions called?',
-back: 'A pride}
+front: 'What is the proper name for a group of lions?',
+back: 'A pride'};
 {title: 'snakeQuestion',
-front: 'The longest snake ever held in captivity belongs to what species?',
-back: 'Python}
+front: 'The longest snake ever held in captivty belongs to what species?',
+back: 'python'};
+{title: 'octopusQuestion',
+front: 'How many hearts does an octopus have?',
+back: 'three'};
+{title: 'sleepyQuestion',
+front: 'What is the sleepiest animal in the world, sleeping around 22 hours each day?',
+back: 'Koala'};
+{title: 'polarQuestion',
+front: 'Polar bears feed mainly on what animal?',
+back: 'seals'};
+{title: 'pearlQuestion',
+front: 'Natural pearls are found in what sea creature?',
+back: 'Oyster'};
+{title: 'fastestQuestion',
+front: 'What is the fastest fish in the ocean?',
+back: 'Sailfish'};
