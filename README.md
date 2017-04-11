@@ -14,6 +14,6 @@ Basic features:
 1) enter node main.js in the terminal 
 2) use the arrow keys to select "basic"
 3) enter the title of the flashcard, for example: parrotQuestion
-4) enter the text for the front of the card when prompted, for example: What is the proper name for a group of parrots
+4) enter the text for the front of the card when prompted, for example: What is the proper name for a group of parrots?
 5) enter the text for the back of the card when prompted, for example: pandemonium
 6) The program then saves the information to the appropriate file for later use and displays the current content
