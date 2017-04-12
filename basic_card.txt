@@ -32,3 +32,6 @@ back: 'Sailfish'};
 {title: 'legsQuestion',
 front: 'Which animal has the most legs?',
 back: 'Millipede'};
+{title: 'beaverQuestion',
+front: 'What are baby beavers called?',
+back: 'Kittens'};
