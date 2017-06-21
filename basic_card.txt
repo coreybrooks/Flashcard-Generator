@@ -35,3 +35,6 @@ back: 'Millipede'};
 {title: 'beaverQuestion',
 front: 'What are baby beavers called?',
 back: 'Kittens'};
+{title: 'catsQuestion',
+front: 'How many 'lives' do cats have',
+back: '9'};
